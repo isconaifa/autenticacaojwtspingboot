@@ -2,6 +2,7 @@ package br.com.clinicanaifa.controller;
 import br.com.clinicanaifa.dto.request.MedicoRequestDTO;
 import br.com.clinicanaifa.dto.response.MedicoResponseDTO;
 import br.com.clinicanaifa.service.MedicoService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("medicos")
+@SecurityRequirement(name = "bearer-key")
 @CrossOrigin("*")
 public class MedicoController {
 
